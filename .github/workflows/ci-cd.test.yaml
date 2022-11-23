@@ -34,11 +34,11 @@ jobs:
 
       - name: Dependencies
         run: npm ci
-        working-directory: ./javascript-solution
+        working-directory: javascript-solution
 
       - name: Produce Output
         run: npm start
-        working-directory: ./javascript-solution
+        working-directory: javascript-solution
 
       - name: Test
         run: make test
