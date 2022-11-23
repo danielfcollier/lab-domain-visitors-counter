@@ -1,7 +1,5 @@
 # Domain Visitors Counter
 
-## Requirements
-
 ## Tests
 
 After running a specific solution, go to the project root directory and run:
