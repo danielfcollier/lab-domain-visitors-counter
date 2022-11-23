@@ -30,11 +30,12 @@ def main():
   
   diff_dict = dict()
   for data in output_data:
-    [visitors, domain] = data
-    expected_visitors = expected_dict.get(domain, -1)
-    output_visitors = int(visitors, 10)
-    if expected_visitors != output_visitors:
-      diff_dict[domain] = (expected_visitors, output_visitors)
+    if data:
+      [visitors, domain] = data
+      expected_visitors = expected_dict.get(domain, -1)
+      output_visitors = int(visitors, 10)
+      if expected_visitors != output_visitors:
+        diff_dict[domain] = (expected_visitors, output_visitors)
   
   if len(diff_dict) == 0:
     print("✅ SUCCESS: Tests are passing! 🥰")
