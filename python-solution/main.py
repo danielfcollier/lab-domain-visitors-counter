@@ -1,5 +1,3 @@
-import sys
-
 from src.domain_visitors_count import domain_visitors_count
 
 def main():
