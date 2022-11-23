@@ -20,7 +20,7 @@ jobs:
       fail-fast: true
 
       matrix:
-        os: [ ubuntu-latest, macos-latest ]
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
         node: [ 14, lts/*, current ]
 
     steps:
@@ -41,4 +41,4 @@ jobs:
         working-directory: javascript-solution
 
       - name: Test
-        run: make test
+        run: make test-assertion

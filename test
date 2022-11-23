@@ -1,0 +1,48 @@
+#!/bin/python3
+
+import sys
+import csv
+
+SUCCESS_CODE = 0
+ERROR_CODE = 1
+
+outputCSV = "output.csv"
+expectedCSV = "expected.csv"
+
+def get_csv_data(file):
+  data_array = []
+  with open(file) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+    
+    for row in csv_reader:
+      data_array.append(row)
+  
+  return data_array
+
+def main():
+  output_data = get_csv_data(outputCSV)
+  expected_data = get_csv_data(expectedCSV)
+  
+  expected_dict = dict()
+  for data in expected_data:
+    [visitors, domain] = data
+    expected_dict[domain] = int(visitors, 10)
+  
+  diff_dict = dict()
+  for data in output_data:
+    [visitors, domain] = data
+    expected_visitors = expected_dict.get(domain, -1)
+    output_visitors = int(visitors, 10)
+    if expected_visitors != output_visitors:
+      diff_dict[domain] = (expected_visitors, output_visitors)
+  
+  if len(diff_dict) == 0:
+    print("✅ SUCCESS: Tests are passing! 🥰")
+    sys.exit(SUCCESS_CODE)
+  
+  print("❌ ERROR: Tests dit not pass! 😫")
+  print(diff_dict)
+  sys.exit(ERROR_CODE)
+
+if __name__ == "__main__":
+  main()
