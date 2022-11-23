@@ -4,10 +4,33 @@
 
 ## Tests
 
-After running an specific solution, go to the project root directory and run:
-```bash
-make test
+After running a specific solution, go to the project root directory and run:
+
+```sh
+python test
 ```
+
+OR, on Linux/Unix systems:
+
+```bash
+make test-assertion
+```
+
+## Python Solution
+
+Go to the project directory with:
+
+```bash
+cd python-solution
+```
+
+Run the program:
+
+```bash
+python main.py
+```
+
+It will generate an `ouptput.csv` file in the home directory.
 
 ## JavaScript Solution
 
@@ -29,6 +52,4 @@ Then, run the program:
 npm start
 ```
 
-: It will output the result in the console for exhibition purposes.
-
-It will generate an `ouptput.csv` file in the home directory;
+It will generate an `ouptput.csv` file in the home directory.
