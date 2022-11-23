@@ -25,4 +25,3 @@ def domain_visitors_count():
   data_array = get_input_data()
   results = search_domains(data_array)
   save_output_data(results)
-  print(results)
