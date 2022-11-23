@@ -38,10 +38,10 @@ def main():
         diff_dict[domain] = (expected_visitors, output_visitors)
   
   if len(diff_dict) == 0:
-    print("✅ SUCCESS: Tests are passing! 🥰")
+    print("[v] SUCCESS: Tests are passing!")
     sys.exit(SUCCESS_CODE)
   
-  print("❌ ERROR: Tests dit not pass! 😫")
+  print("[x] ERROR: Tests dit not pass!")
   print(diff_dict)
   sys.exit(ERROR_CODE)
 
