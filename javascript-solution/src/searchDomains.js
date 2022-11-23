@@ -15,7 +15,7 @@ function searchDomains(dataArray, depth = 4) {
       const hasSubDomainNotBeingComputed = !searchedDomainsSet.has(subDomain);
       if (hasSubDomainNotBeingComputed) {
         searchedDomainsSet.add(subDomain);
-        const result = searchSubDomain(subDomain, dataArray, depth);
+        const result = searchSubDomain(subDomain, dataArray);
         const [visitors, domain] = result;
         results.push({ visitors, domain });
       }

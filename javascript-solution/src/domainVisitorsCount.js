@@ -19,7 +19,7 @@ function domainVisitorsCount() {
       results.forEach((result) => {
         const { visitors, domain } = result;
 
-        const line = `${visitors}, ${domain}\n`;
+        const line = `${visitors},${domain}\n`;
         fileWriter.write(line);
       });
     });
