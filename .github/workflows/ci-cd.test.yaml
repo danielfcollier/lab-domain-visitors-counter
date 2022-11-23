@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  tests:
+  test-javascript:
 
     name: Node ${{ matrix.node }} on ${{ matrix.os }}
 
@@ -30,7 +30,7 @@ jobs:
       - name: Install Node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node }}
 
       - name: Dependencies
         run: npm ci
@@ -39,6 +39,42 @@ jobs:
       - name: Produce Output
         run: npm start
         working-directory: javascript-solution
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.7"
+
+      - name: Test
+        run: make test-assertion
+
+  test-python:
+
+    name: Python ${{ matrix.python }} on ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    timeout-minutes: 10
+
+    strategy:
+      fail-fast: true
+
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        python: ["3.7", "3.8", "3.9", "3.10"]
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Install Python ${{ matrix.python }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Produce Output
+        run: python main.py
+        working-directory: python-solution
 
       - name: Test
         run: make test-assertion
