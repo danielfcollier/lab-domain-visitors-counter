@@ -46,7 +46,7 @@ jobs:
           python-version: "3.7"
 
       - name: Test
-        run: make test-assertion
+        run: python test
 
   test-python:
 
@@ -77,4 +77,4 @@ jobs:
         working-directory: python-solution
 
       - name: Test
-        run: make test-assertion
+        run: python test
