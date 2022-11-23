@@ -1,4 +1,4 @@
-function searchSubDomain(subDomain, dataArray, depth) {
+function searchSubDomain(subDomain, dataArray) {
   const resultsWithSubDomain = dataArray.filter((data) => {
     const { domain } = data;
 

@@ -1,6 +1,6 @@
 const searchSubDomain = require("./searchSubDomain");
 
-function searchDomains(dataArray, depth = 3) {
+function searchDomains(dataArray, depth = 4) {
   const results = [];
   const searchedDomainsSet = new Set();
 
