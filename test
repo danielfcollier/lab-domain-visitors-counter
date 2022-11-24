@@ -42,7 +42,7 @@ def main():
     print("[v] SUCCESS: Tests are passing!")
     sys.exit(SUCCESS_CODE)
   
-  print("[x] ERROR: Tests dit not pass!")
+  print("[x] ERROR: Tests did not pass!")
   print(diff_dict)
   sys.exit(ERROR_CODE)
 
