@@ -23,17 +23,17 @@ def main():
   output_data = get_csv_data(outputCSV)
   expected_data = get_csv_data(expectedCSV)
   
-  expected_dict = dict()
-  for data in expected_data:
+  output_dict = dict()
+  for data in output_data:
     [visitors, domain] = data
-    expected_dict[domain] = int(visitors, 10)
+    output_dict[domain] = int(visitors, 10)
   
   diff_dict = dict()
-  for data in output_data:
+  for data in expected_data:
     if data:
       [visitors, domain] = data
-      expected_visitors = expected_dict.get(domain, -1)
-      output_visitors = int(visitors, 10)
+      output_visitors = output_dict.get(domain, -1)
+      expected_visitors = int(visitors, 10) 
       if expected_visitors != output_visitors:
         diff_dict[domain] = (expected_visitors, output_visitors)
   
