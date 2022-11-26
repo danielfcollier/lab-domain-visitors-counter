@@ -30,7 +30,7 @@ go run main.go
 
 It will generate an `ouptput.csv` file in the home directory.
 
-> Run with Docker:
+### Run with Docker:
 
 ```bash
 docker build -t golang-solution -f Dockerfile.Golang .
@@ -63,7 +63,7 @@ python main.py
 
 It will generate an `ouptput.csv` file in the home directory.
 
-> Run with Docker:
+### Run with Docker:
 
 ```bash
 docker build -t python-solution -f Dockerfile.Python .
@@ -102,7 +102,7 @@ npm start
 
 It will generate an `ouptput.csv` file in the home directory.
 
-> Run with Docker:
+### Run with Docker:
 
 ```bash
 docker build -t javascript-solution -f Dockerfile.JavaScript .
