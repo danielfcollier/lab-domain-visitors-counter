@@ -32,6 +32,8 @@ It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
 
+In the project directory, run:
+
 ```bash
 docker build -t golang-solution -f Dockerfile.Golang .
 docker create --name solution golang-solution
@@ -64,6 +66,8 @@ python main.py
 It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
+
+In the project directory, run:
 
 ```bash
 docker build -t python-solution -f Dockerfile.Python .
@@ -103,6 +107,8 @@ npm start
 It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
+
+In the project directory, run:
 
 ```bash
 docker build -t javascript-solution -f Dockerfile.JavaScript .
