@@ -32,7 +32,7 @@ It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
 
-In the project directory, run:
+In the project root directory, run:
 
 ```bash
 docker build -t golang-solution -f Dockerfile.Golang .
@@ -67,7 +67,7 @@ It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
 
-In the project directory, run:
+In the project root directory, run:
 
 ```bash
 docker build -t python-solution -f Dockerfile.Python .
@@ -108,7 +108,7 @@ It will generate an `ouptput.csv` file in the home directory.
 
 ### Run with Docker:
 
-In the project directory, run:
+In the project root directory, run:
 
 ```bash
 docker build -t javascript-solution -f Dockerfile.JavaScript .
