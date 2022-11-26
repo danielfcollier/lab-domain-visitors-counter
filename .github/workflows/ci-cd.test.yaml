@@ -92,7 +92,7 @@ jobs:
 
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
-        golang: [ "1.14", "1.15", "1.16.x" ]
+        golang: [ "1.18x" ]
 
     steps:
       - name: Checkout source
