@@ -1,0 +1,7 @@
+FROM golang:1.19-alpine as runner
+
+WORKDIR /app
+
+COPY . .
+
+RUN cd golang-solution && go run main.go && cd .. && mkdir data && cp output.csv data

@@ -1,0 +1,6 @@
+FROM python:3.9-slim as runner
+WORKDIR /app
+
+COPY . .
+
+RUN cd python-solution && python main.py && cd .. && mkdir data && cp output.csv data
