@@ -43,7 +43,12 @@ def main():
     sys.exit(SUCCESS_CODE)
   
   print("[x] ERROR: Tests did not pass!")
-  print(diff_dict)
+  for key in diff_dict:
+    expectedValue, currentValue = diff_dict[key]
+    currentValue = "Not provided!" if currentValue == -1 else currentValue
+    print(key)
+    print(f"Expected: {expectedValue}")
+    print(f"Current: {currentValue}\n")
   sys.exit(ERROR_CODE)
 
 if __name__ == "__main__":
