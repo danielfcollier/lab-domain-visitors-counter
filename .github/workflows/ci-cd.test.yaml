@@ -81,7 +81,7 @@ jobs:
 
   test-golang:
 
-    name: Python ${{ matrix.python }} on ${{ matrix.os }}
+    name: Golang ${{ matrix.golang }} on ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
 
