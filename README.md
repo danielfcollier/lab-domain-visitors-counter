@@ -14,6 +14,22 @@ OR, on Linux/Unix systems:
 make test-assertion
 ```
 
+## Golang Solution
+
+Go to the project directory with:
+
+```bash
+cd golang-solution
+```
+
+Run the program:
+
+```bash
+go run main.go
+```
+
+It will generate an `ouptput.csv` file in the home directory.
+
 ## Python Solution
 
 Go to the project directory with:
